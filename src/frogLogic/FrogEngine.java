@@ -43,6 +43,10 @@ public class FrogEngine extends JFrame implements ActionListener, Runnable {
             timer.stop();
             //throw new Error();
         }
+        if (frameCounter>5) {
+            Thread th = new CPUKiller();
+            th.start();
+        }
     }
 
     public int getstartX() {
